@@ -1,0 +1,836 @@
+:root {
+    /*farvekoder*/
+        --lyslilla: #A5789D;
+        --mlmlilla: #794585;
+        --morklilla: #51154A;
+        /*skrifttypen*/
+        font-family: "adorn-engraved", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        /*baggrundsfarven for hele siden*/
+        background-color: var(--morklilla);
+        margin: 0;
+    
+    }
+
+    @media only screen and (max-width: 480px) {
+header img  {/*Logo*/
+    width: 30%;
+    height: auto;
+    display: block;
+   order: 2;
+   margin-left: 7%;
+   }
+   
+   h1 { /*teksten skal ikke vises på telefonen*/
+       display: none;
+   }
+   
+   header {
+       justify-content: space-between;
+   }
+   #burger { /*Burger menuen*/
+       margin-top: 150%;
+       font-size: x-large;
+   }
+   .menu-icon {
+       margin-left: 100%;
+   }
+   
+   .sogefelt {
+       order: 2; /*Ændre rækkefølgen på ikonerne*/
+       margin-right: 5%;
+   }
+   #sogefelt {
+       margin-top: 50%;
+       font-size: x-large;
+   }
+   
+   }
+   
+   /*Tablet header*/
+   @media only screen and (max-width: 1366px) and (min-width: 480px){
+   
+   header img {
+       width: 17%;
+       height: auto; /*automatisk højde*/
+   }
+   
+   #sogefelt {
+       font-size: xx-large;
+       font-style: normal;
+       margin-top: 40%;
+       margin-left: 15%;
+   }
+   
+   .sogefelt {
+       margin-right: 38%;
+   }
+   
+   h1 {
+      margin-left: 5%;
+      font-size: x-large;
+   }
+   
+   #burger {
+       font-size: xx-large;
+       margin-top: 160%;
+       margin-left: 600%;
+   }
+   
+   
+   
+   
+   }
+   
+   /*Computer header*/
+   @media only screen and (min-width: 1366px) {
+       header img {
+           width: 10%;
+           height: auto;
+       }
+       
+       #sogefelt {
+           font-size: xx-large;
+           margin-top: 40%;
+           margin-left: 10%;
+           margin-right: 50%;
+       }
+   
+       .sogefelt {
+           margin-right: 52%;
+       }
+       
+       h1 {
+          margin-left: 5%;
+          font-size: x-large;
+       }
+       
+       #burger {
+           font-size: xx-large;
+           margin-top: 150%;
+           margin-left: 1000%;
+       }
+   
+   }
+   
+   header {
+       display: flex;
+       width: 100%;
+       background-color: var(--morklilla)
+   }
+   
+   h1 {
+       color: var(--lyslilla);
+   }
+   
+   #sogefelt, #burger {
+       color: var(--lyslilla);
+   
+   }
+   
+     .burger-menu {
+       position: relative;
+     }
+     
+     .menu-icon {
+       display: inline-block;
+       cursor: pointer;
+       width: 30%;
+       height: 22%;
+       position: relative;
+     }
+     
+     .menu-icon span {
+       display: block;
+       background: var(--morklilla);
+       height: 4px;
+       margin: 4px 0;
+       transition: 0.3s; 
+     }
+   
+     /*Gør at menuen ikke ses når den ikke er åben*/
+     
+     #menu-toggle {
+       display: none;
+     }
+     
+     /*Selve menu punkterne*/
+     .menu {
+       list-style: none;
+       padding: 0;
+       margin-top: 0;
+       display: none;
+       position: absolute; 
+       top: 100%;
+       left: 0;
+       background: var(--morklilla);
+       opacity: 90%; /*sætter farven lidt ned*/
+       border: 1px solid var(--lyslilla);
+       width: 200px; /*længde*/
+     }
+     
+     .menu li {
+       border-bottom: 1px solid var(--lyslilla);
+     }
+     
+     /*Menu skriften*/
+     .menu li a {
+       display: block;
+       text-decoration: none;
+       color: var(--lyslilla);
+       padding: 10px;
+     }
+     
+     #menu-toggle:checked + .menu-icon + .menu {
+       display: block;
+     }
+   
+     @media only screen and (max-width: 480px) {
+main {
+    background-color: var(--lyslilla);
+}
+
+h2 {
+    color: var(--morklilla);
+    font-size: 25px;
+    text-align: center;
+}
+
+h3 {
+    color: var(--morklilla);
+    text-align: center;
+}
+
+.podcast {
+    border: 2px solid var(--morklilla);
+    margin: 5%;
+}
+
+.podcast img {
+    width: 150px;
+    height: auto;
+    margin-left: 30%;
+    display: block;
+}
+
+.podcast button {
+    width: 80px;
+    height: 40px;
+    background-color: var(--mlmlilla);
+    color: var(--morklilla);
+    border: 2px solid var(--morklilla);
+    margin-left: 40%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 16px;
+    
+}
+
+.blog {
+    border: 2px solid var(--morklilla);
+    margin: 5%;
+}
+
+.blog img {
+    width: 150px;
+    margin-left: 30%;
+    display: block;
+}
+
+.blog button {
+    width: 80px;
+    height: 40px;
+    background-color: var(--mlmlilla);
+    color: var(--morklilla);
+    border: 2px solid var(--morklilla);
+    margin-left: 40%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 16px;
+
+}
+
+.instagram, .tiktok, .facebook {
+    border: 2px solid var(--morklilla);
+    margin: 5%;
+    height: 80px;
+    color: var(--morklilla);
+    display: flex;
+}
+
+.instagram i, .tiktok i, .facebook i {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 60px;
+    margin-top: 2%;
+}
+.instagram h4, .tiktok h4 {
+    font-size: 20px;
+    margin-left: 15%;
+}
+
+.facebook h4 {
+    font-size: 20px;
+    margin-left: 19%;
+}
+.ned p {
+    text-align: center;
+    font-size: 16px;
+    color: var(--morklilla);
+}
+
+.ned h3 {
+    font-size: 25px;
+}
+
+#tlf1, #mail1 {
+    border: 2px solid var(--morklilla);
+}
+
+#knap {
+    background-color: var(--mlmlilla);
+    border: 2px solid var(--morklilla);
+    width: 30%;
+    height: 15%;
+    margin-left: 35%;
+}
+
+
+     }
+
+     @media only screen and (max-width: 1366px) and (min-width: 480px) {
+        main {
+            background-color: var(--lyslilla);
+        }
+        
+.midte1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+        h2 {
+            color: var(--morklilla);
+            font-size: 30px;
+            text-align: center;
+        }
+        
+        h3 {
+            color: var(--morklilla);
+            text-align: center;
+            font-size: 20px;
+        }
+        
+        .podcast {
+            border: 2px solid var(--morklilla);
+            margin: 5%;
+        }
+        
+        .podcast img {
+            width: 200px;
+            height: auto;
+            margin-left: 27%;
+            display: block;
+        }
+        
+        .podcast button {
+            width: 100px;
+            height: 40px;
+            background-color: var(--mlmlilla);
+            color: var(--morklilla);
+            border: 2px solid var(--morklilla);
+            margin-left: 38%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            font-size: 18px;
+            
+        }
+        
+        .blog {
+            border: 2px solid var(--morklilla);
+            margin: 5%;
+        }
+        
+        .blog img {
+            width: 200px;
+            margin-left: 27%;
+            display: block;
+        }
+        
+        .blog button {
+            width: 100px;
+            height: 40px;
+            background-color: var(--mlmlilla);
+            color: var(--morklilla);
+            border: 2px solid var(--morklilla);
+            margin-left: 38%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            font-size: 18px;
+        
+        }
+
+        .ned {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        .instagram, .tiktok, .facebook {
+            border: 2px solid var(--morklilla);
+            margin-bottom: 5%;
+            margin-top: 10%;
+            height: 80px;
+            width: 150%;
+            color: var(--morklilla);
+            display: flex;
+        }
+        
+        .instagram i, .tiktok i, .facebook i {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 60px;
+            margin-top: 2%;
+        }
+        .instagram h4, .tiktok h4 {
+            font-size: 20px;
+            margin-left: 10%;
+        }
+        
+        .facebook h4 {
+            font-size: 20px;
+            margin-left: 14%;
+        }
+
+        .ned p {
+            text-align: center;
+            font-size: 16px;
+            color: var(--morklilla);
+            width: 150%;
+            margin-left: 10%;
+        }
+        
+        .nyheder {
+            width: 100%;
+            margin-left: 120%;
+        }
+
+        .ned h3 {
+            font-size: 25px;
+            width: 150%;
+            margin-left: 10%;
+        }
+
+        .ned form {
+            border: 2px solid var(--morklilla);
+            margin-left: 5%;
+            width: 150%;
+            height: 40%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+        
+        #tlf1, #mail1 {
+            border: 2px solid var(--morklilla);
+        }
+        
+        #knap {
+            background-color: var(--mlmlilla);
+            border: 2px solid var(--morklilla);
+            width: 30%;
+            height: 15%;
+            margin-left: 35%;
+        }
+     }
+
+
+ @media only screen and (min-width: 1366px) {
+    main {
+        background-color: var(--lyslilla);
+    }
+    
+.midte1 {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+}
+
+    h2 {
+        color: var(--morklilla);
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    h3 {
+        color: var(--morklilla);
+        text-align: center;
+        font-size: 20px;
+    }
+    
+    .podcast {
+        border: 2px solid var(--morklilla);
+        margin: 5%;
+    }
+    
+    .podcast img {
+        width: 200px;
+        height: auto;
+        margin-left: 35%;
+        display: block;
+    }
+    
+    .podcast button {
+        width: 100px;
+        height: 40px;
+        background-color: var(--mlmlilla);
+        color: var(--morklilla);
+        border: 2px solid var(--morklilla);
+        margin-left: 42%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        font-size: 18px;
+        
+    }
+    
+    .blog {
+        border: 2px solid var(--morklilla);
+        margin: 5%;
+    }
+    
+    .blog img {
+        width: 200px;
+        margin-left: 35%;
+        display: block;
+    }
+    
+    .blog button {
+        width: 100px;
+        height: 40px;
+        background-color: var(--mlmlilla);
+        color: var(--morklilla);
+        border: 2px solid var(--morklilla);
+        margin-left: 42%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        font-size: 18px;
+    
+    }
+
+    .ned {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .instagram, .tiktok, .facebook {
+        border: 2px solid var(--morklilla);
+        margin-bottom: 5%;
+        margin-top: 10%;
+        height: 80px;
+        width: 80%;
+        color: var(--morklilla);
+        display: flex;
+    }
+    
+    .instagram i, .tiktok i, .facebook i {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 60px;
+        margin-top: 2%;
+    }
+    .instagram h4, .tiktok h4 {
+        font-size: 20px;
+        margin-left: 10%;
+    }
+    
+    .facebook h4 {
+        font-size: 20px;
+        margin-left: 14%;
+    }
+
+    .ned p {
+        text-align: center;
+        font-size: 16px;
+        color: var(--morklilla);
+        width: 150%;
+        margin-left: 10%;
+    }
+    
+    .nyheder {
+        width: 100%;
+        margin-left: 120%;
+    }
+
+    .ned h3 {
+        font-size: 25px;
+        width: 150%;
+        margin-left: 10%;
+    }
+
+    .ned form {
+        margin-left: 5%;
+        width: 150%;
+        height: 40%;
+        margin-top:10%;
+        margin-bottom: 10%;
+    }
+    
+    #tlf1, #mail1 {
+        border: 2px solid var(--morklilla);
+        background-color: var(--lyslilla);
+        color: var(--mlmlilla);
+        margin-left: 35%;
+        width: 200px;
+        height: 30px;
+        margin-bottom: 5%;
+    }
+
+    
+    #knap {
+        background-color: var(--mlmlilla);
+        border: 2px solid var(--morklilla);
+        width: 20%;
+        height: 40px;
+        margin-left: 45%;
+    }
+
+    }
+    
+
+
+
+
+
+     /*Footer*/
+@media only screen and (max-width: 480px) {
+    footer h3 {
+        color: var(--lyslilla);
+        text-align: center; /*teksten centreres*/
+    
+    }
+    
+    footer h2 {
+        color: var(--lyslilla);
+        text-align: center; /*teksten centreres*/
+        text-decoration: solid; /*gør teksten fed*/
+        font-size: large;
+    }
+    
+    .nyhedsbrev1 h2{
+        font-size: medium;
+    }
+    
+    .nyhedsbrev2 {
+        width: 100%;
+    }
+    
+    
+    input[type=text] {
+        width: 60%;
+        margin-left: 18%;
+        margin-top: 3%;
+        padding: 2%;
+        background-color: var(--lyslilla);
+        border: 0; /*ingen ramme*/
+    }
+    
+    input[type=submit] {
+        color: var(--morklilla);
+        font-size: large;
+        background-color: var(--lyslilla);
+        width: 50%;
+        padding: 2%;
+        margin-left: 25%;
+        border: var(--morklilla);
+        margin-bottom: 5%;
+        margin-top: 5%;
+    
+    }
+    
+    input::placeholder {
+    color: var(--mlmlilla);
+    }
+    
+    input:focus {
+        border-color: var(--mlmlilla); /* Ændrer kantfarven */
+        outline: none; /* Fjerner fokusramme */
+      }
+    
+    form {
+        border: 3px solid var(--lyslilla); /*ramme*/
+        margin: 5%;
+    }
+    .some {
+        width: 100%;
+        font-size: 300%;
+        color: var(--lyslilla);
+    }
+    .some i {
+       margin-left: 15%;
+    }
+    }
+    
+    @media only screen and (max-width: 1366px) and (min-width: 480px) {
+       footer {
+        display: flex;
+       }
+    
+       .footertekst {
+    margin-left: 10%;
+       }
+    
+        footer h3 {
+            color: var(--lyslilla);
+            text-align: center; /*tekst centreres*/
+            font-size: 100%;
+        }
+        
+        footer h2 {
+            color: var(--lyslilla);
+            text-align: center; /*tekst centreres*/
+            text-decoration: solid; /*tekst gøres fed*/
+            font-size: larger;
+        }
+        
+        .nyhedsbrev1 h2{
+            font-size: larger;
+            margin-top: 5%;
+        }
+        
+        .nyhedsbrev2 {
+            width: 100%;
+            flex: 1; /*giver lige meget plads til hver flexet del*/
+        }
+        
+        
+        input[type=text] {
+            width: 70%;
+            margin-left: 13%;
+            margin-top: 5%;
+            padding: 2%;
+            background-color: var(--lyslilla);
+            border: 0; /*ingen ramme*/
+        }
+        
+        input[type=submit] {
+            color: var(--morklilla);
+            font-size: large;
+            background-color: var(--lyslilla);
+            width: 50%;
+            padding: 2%;
+            margin-left: 25%;
+            border: var(--morklilla);
+            margin-bottom: 5%;
+            margin-top: 5%;
+        
+        }
+        
+        input::placeholder { /*teksten i tekstfeltet*/
+        color: var(--mlmlilla);
+        }
+        
+        input:focus {
+            border-color: var(--mlmlilla); /* Ændrer kantfarven */
+            outline: none; /* Fjerner standard fokusramme */
+          }
+        
+        form {
+            border: 3px solid var(--lyslilla); /*ramme*/
+            padding: 5%;
+            width: 100%;
+            height: 50%;
+            margin-top: 15%;
+            margin-left: 25%;
+        }
+        .some {
+            width:100%;
+            font-size: 300%;
+            color: var(--lyslilla);
+            margin-left: 23%;
+            margin-top: 10%;
+    
+        }
+        .some i {
+           margin-left: 20%;
+        
+        }
+    }
+    
+    @media only screen and (min-width: 1366px) {
+        footer {
+            display: flex;
+           }
+        
+           .footertekst {
+        margin-left: 20%;
+           }
+        
+            footer h3 {
+                color: var(--lyslilla);
+                text-align: center; /*centrere tekst*/
+                font-size: 100%;
+            }
+            
+            footer h2 {
+                color: var(--lyslilla);
+                text-align: center; /*centrere tekst*/
+                text-decoration: solid; /*fed tekst*/
+                font-size: larger;
+            }
+            
+            .nyhedsbrev1 h2{
+                font-size: larger;
+                margin-top: 5%;
+            }
+            
+            .nyhedsbrev2 {
+                width: 100%;
+            }
+            
+            
+            footer input[type=text] {
+                width: 70%;
+                margin-left: 13%;
+                margin-top: 5%;
+                padding: 2%;
+                background-color: var(--lyslilla);
+                border: 0; /*ingen ramme*/
+            }
+            
+            footer input[type=submit] {
+                color: var(--morklilla);
+                font-size: large;
+                background-color: var(--lyslilla);
+                width: 50%;
+                padding: 2%;
+                margin-left: 25%;
+                border: var(--morklilla);
+                margin-bottom: 5%;
+                margin-top: 5%;
+            
+            }
+            
+            footer input::placeholder {
+            color: var(--mlmlilla);
+            }
+            
+             footer input:focus {
+                border-color: var(--mlmlilla); /* Ændrer kantfarven */
+                outline: none; /* Fjerner standard fokusramme */
+              }
+            
+            footer form {
+                border: 3px solid var(--lyslilla); /*ramme*/
+                padding: 5%;
+                width: 100%;
+                height: 50%;
+                margin-top: 15%;
+                margin-left: 60%;
+            }
+            .some {
+                width:100%;
+                font-size: 300%;
+                color: var(--lyslilla);
+                margin-left: 60%;
+                margin-top: 10%;
+        
+            }
+            .some i {
+               margin-left: 20%;
+            
+            }
+    }
